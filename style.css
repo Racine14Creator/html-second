@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    font-family: ubuntu;
+}
+
+.container{
+    position: relative;
+    background-color: red;
+    width: 1000px;
+    height: 600px;
+    margin: 50px auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    width: 20%;
+    background-color: rgb(8,79,152);
+    height: 100%;
+
+    color: white;
+}
+
+aside h1{
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+aside ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+aside ul li {
+    margin: 1px 0;
+}
+
+aside ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 13px;
+
+    gap: 10px
+}
+
+aside ul li a:hover, aside ul li a.active{
+    background-color: rgba(62,126,194,0.344);
+}
+
+/* Let us make the main container now */
+
+main {
+    width: 80%;
+    background-color: aliceblue;
+}
+
+main nav{
+    position: relative;
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
+
+    gap: 50px;
+}
+main nav form{
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    flex: 1;
+}
+main nav form input{
+    background: none;
+    border: none;
+    outline: none;
+    width: calc(100% - 30px);
+    padding: 10px;
+}
+
+.navgation-menu{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    align-content: center;
+    padding: 2px;
+    /* background: red; press ctrl+/ key to comment your code line */
+}
+
+span.icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    /* background: green; */
+
+    font-size: 12px;
+    color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.avatar .text{
+    font-size: 12px;
+}
+.avatar img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+.parent{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.parent .aside{
+    width: 30%;
+    dusplay: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside, .main{
+    padding: 20px;
+}
+
+.parent .aside .child{
+    border: 2px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.child h1{
+    font-size: 15px;
+}
+
+.child p{
+    font-size: 12px;
+}
+
+
+.parent .main{
+    width: 70%;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .header, .form{
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form form button{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.grid-2{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+.grid-2 div{
+    width: 100%;
+}
+
+.group{
+    width: 100%;
+}
+
+.group input, .group label{
+    display: block;
+}
+
+.group input, .group select{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    outline: none;
+}
