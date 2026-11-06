@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voxa BootCamp - Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <aside><h1>Voxa Global</h1><ul>
+        <li><a href="./my-job-feed.html"><i class="fas fa-briefcase"></i>My Job Feed</a></li>
+        <li><a href="./profile.html"><i class="fas fa-user"></i>Profile</a></li>
+        <li><a href="./dashboard.html" class="active"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+        <li><a href="./saved-jobs.html"><i class="fas fa-floppy-disk"></i>Saved Jobs</a></li>
+        <li><a href="./settings.html"><i class="fas fa-toggle-on"></i>Settings</a></li>
+      </ul></aside>
+      <main>
+        <nav><form><input type="search" placeholder="Search Anything..." /><i class="fa-solid fa-search"></i></form><div class="navgation-menu"><a class="icon" href="./settings.html"><i class="fa-solid fa-bell"></i></a><a class="icon" href="./settings.html"><i class="fa-solid fa-envelope"></i></a><a class="icon" href="./profile.html"><i class="fa-solid fa-user"></i></a><div class="avatar"><img src="./man.jpg" alt="Avatar" /><span>Voxa Global Ltd</span></div></div></nav>
+        <div class="page-content">
+          <div class="page-heading"><div><h1>Dashboard</h1><p>Welcome back. Here is your career activity.</p></div><a class="btn" href="./my-job-feed.html">Find Jobs</a></div>
+          <div class="stats-grid">
+            <div class="card stat-card"><div class="stat-icon"><i class="fas fa-eye"></i></div><div><strong>248</strong><span>Profile views</span></div></div>
+            <div class="card stat-card"><div class="stat-icon"><i class="fas fa-paper-plane"></i></div><div><strong>18</strong><span>Applications</span></div></div>
+            <div class="card stat-card"><div class="stat-icon"><i class="fas fa-bookmark"></i></div><div><strong>12</strong><span>Saved jobs</span></div></div>
+          </div>
+          <div class="dashboard-grid">
+            <div class="card"><h2>Applications overview</h2><div class="bar-chart"><div style="height:40%"></div><div style="height:65%"></div><div style="height:48%"></div><div style="height:78%"></div><div style="height:58%"></div><div style="height:88%"></div><div style="height:72%"></div></div></div>
+            <div class="card"><h2>Recent activity</h2><ul class="activity-list"><li>Application viewed by Voxa Academy<small>2 hours ago</small></li><li>New job matches your profile<small>Yesterday</small></li><li>Profile information updated<small>3 days ago</small></li></ul></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

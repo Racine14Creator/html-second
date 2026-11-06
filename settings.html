@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voxa BootCamp - Settings</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <aside><h1>Voxa Global</h1><ul>
+        <li><a href="./my-job-feed.html"><i class="fas fa-briefcase"></i>My Job Feed</a></li><li><a href="./profile.html"><i class="fas fa-user"></i>Profile</a></li><li><a href="./dashboard.html"><i class="fas fa-chart-line"></i>Dashboard</a></li><li><a href="./saved-jobs.html"><i class="fas fa-floppy-disk"></i>Saved Jobs</a></li><li><a href="./settings.html" class="active"><i class="fas fa-toggle-on"></i>Settings</a></li>
+      </ul></aside>
+      <main>
+        <nav><form><input type="search" placeholder="Search settings..." /><i class="fa-solid fa-search"></i></form><div class="navgation-menu"><a class="icon" href="./settings.html"><i class="fa-solid fa-bell"></i></a><a class="icon" href="./settings.html"><i class="fa-solid fa-envelope"></i></a><a class="icon" href="./profile.html"><i class="fa-solid fa-user"></i></a><div class="avatar"><img src="./man.jpg" alt="Avatar" /><span>Voxa Global Ltd</span></div></div></nav>
+        <div class="page-content"><div class="page-heading"><div><h1>Settings</h1><p>Manage notifications, privacy and account preferences.</p></div></div>
+          <div class="settings-list">
+            <div class="settings-row"><div><h2>Email notifications</h2><p>Receive updates about applications and jobs.</p></div><button class="toggle active" type="button" aria-label="Toggle email notifications"></button></div>
+            <div class="settings-row"><div><h2>Push notifications</h2><p>Receive important messages in your browser.</p></div><button class="toggle" type="button" aria-label="Toggle push notifications"></button></div>
+            <div class="settings-row"><div><h2>Public profile</h2><p>Allow employers to discover your profile.</p></div><button class="toggle active" type="button" aria-label="Toggle public profile"></button></div>
+            <div class="settings-row"><div><h2>Weekly job digest</h2><p>Get a summary of the best jobs every Friday.</p></div><button class="toggle active" type="button" aria-label="Toggle weekly digest"></button></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
