@@ -29,35 +29,96 @@
             <div class="avatar"><img src="./man.jpg" width="100px" alt="Avatar" /><span>Voxa Global Ltd</span></div>
           </div>
         </nav>
-        <div class="parent">
-          <div class="aside">
-            <div class="child"><h1>Account settings</h1><p>Manage your personal information</p></div>
-            <div class="child"><h1>Notifications</h1><p>Choose how you receive updates</p></div>
-            <div class="child"><h1>Privacy</h1><p>Control your profile visibility</p></div>
-            <div class="child"><h1>More details</h1><p>Complete your professional profile</p></div>
-          </div>
-          <div class="main">
-            <div class="header">
-              <div class="profile"><img src="./man.jpg" alt="Profile avatar" /></div>
-              <div class="details"><h3>Upload a New Photo</h3><span>main.jpg</span></div>
-              <div><button type="button">Upload</button></div>
+        <div class="profile-page">
+          <aside class="profile-sidebar">
+            <button class="profile-section active" type="button" data-section="personal">
+              <span class="section-icon"><i class="fas fa-user"></i></span>
+              <span><strong>Personal details</strong><small>Your basic information</small></span>
+            </button>
+            <button class="profile-section" type="button" data-section="professional">
+              <span class="section-icon"><i class="fas fa-briefcase"></i></span>
+              <span><strong>Professional</strong><small>Experience and skills</small></span>
+            </button>
+            <button class="profile-section" type="button" data-section="account">
+              <span class="section-icon"><i class="fas fa-shield-halved"></i></span>
+              <span><strong>Account</strong><small>Password and security</small></span>
+            </button>
+            <button class="profile-section" type="button" data-section="privacy">
+              <span class="section-icon"><i class="fas fa-lock"></i></span>
+              <span><strong>Privacy</strong><small>Profile visibility</small></span>
+            </button>
+          </aside>
+
+          <div class="profile-content">
+            <div class="profile-cover">
+              <div class="profile-photo-wrap">
+                <img id="profilePreview" src="./man.jpg" alt="Profile avatar" />
+                <label class="photo-edit" for="photoInput" title="Change profile photo">
+                  <i class="fas fa-camera"></i>
+                </label>
+              </div>
+              <div class="profile-identity">
+                <h1>Voxa Global Ltd</h1>
+                <p>Frontend Developer</p>
+                <span><i class="fas fa-location-dot"></i> Goma, DR Congo</span>
+              </div>
+              <div class="profile-completion">
+                <strong>85%</strong>
+                <span>Profile complete</span>
+              </div>
             </div>
-            <div class="form">
-              <form>
-                <div class="grid-2">
-                  <div class="group"><label for="firstname">First Name *</label><input type="text" id="firstname" placeholder="Enter your first name" /></div>
-                  <div class="group"><label for="email">Email *</label><input type="email" id="email" placeholder="Enter your email" /></div>
+
+            <form id="profileForm" class="profile-form">
+              <div class="profile-section-panel" data-panel="personal">
+                <div class="profile-form-heading">
+                  <div><h2>Personal information</h2><p>Keep your information accurate and up to date.</p></div>
+                  <span class="saved-status" id="savedStatus"><i class="fas fa-circle-check"></i> Saved</span>
                 </div>
-                <div class="group"><label for="location">Address *</label><input type="text" id="location" placeholder="Enter your location" /></div>
                 <div class="grid-2">
-                  <div class="group"><label for="city">City *</label><input type="text" id="city" placeholder="Enter your city" /></div>
-                  <div class="group"><label for="state">State/Province *</label><input type="text" id="state" placeholder="Enter your state/province" /></div>
-                  <div class="group"><label for="zip">Zip Code</label><input type="number" id="zip" /></div>
-                  <div class="group"><label for="country">Country</label><select id="country"><option value="">-- select --</option><option>Rwanda</option><option>DR Congo</option><option>United States</option></select></div>
+                  <div class="group"><label for="firstname">First Name *</label><input type="text" id="firstname" value="Voxa" placeholder="Enter your first name" required /></div>
+                  <div class="group"><label for="lastname">Last Name *</label><input type="text" id="lastname" value="Global" placeholder="Enter your last name" required /></div>
+                  <div class="group"><label for="email">Email Address *</label><input type="email" id="email" value="hello@voxa.global" placeholder="Enter your email" required /></div>
+                  <div class="group"><label for="phone">Phone Number</label><input type="tel" id="phone" value="+243 000 000 000" placeholder="Enter your phone number" /></div>
                 </div>
-                <div class="groupe"><button type="submit">Update information</button></div>
-              </form>
-            </div>
+                <div class="group"><label for="location">Address *</label><input type="text" id="location" value="Goma, North Kivu" placeholder="Enter your location" required /></div>
+                <div class="grid-2">
+                  <div class="group"><label for="city">City *</label><input type="text" id="city" value="Goma" placeholder="Enter your city" required /></div>
+                  <div class="group"><label for="state">State/Province *</label><input type="text" id="state" value="North Kivu" placeholder="Enter your state/province" required /></div>
+                  <div class="group"><label for="zip">Zip Code</label><input type="number" id="zip" value="12345" /></div>
+                  <div class="group"><label for="country">Country</label><select id="country"><option>DR Congo</option><option>Rwanda</option><option>United States</option></select></div>
+                </div>
+              </div>
+
+              <div class="profile-section-panel hidden" data-panel="professional">
+                <div class="profile-form-heading"><div><h2>Professional details</h2><p>Add details that help employers find you.</p></div></div>
+                <div class="grid-2">
+                  <div class="group"><label for="jobTitle">Professional title</label><input type="text" id="jobTitle" value="Frontend Developer" /></div>
+                  <div class="group"><label for="experience">Experience</label><select id="experience"><option>1-3 years</option><option>3-5 years</option><option>5+ years</option></select></div>
+                </div>
+                <div class="group"><label for="bio">Professional summary</label><textarea id="bio" rows="5">Creative frontend developer focused on accessible and responsive web experiences.</textarea></div>
+                <div class="group"><label for="skills">Skills</label><input type="text" id="skills" value="HTML, CSS, JavaScript, UI Design" /></div>
+              </div>
+
+              <div class="profile-section-panel hidden" data-panel="account">
+                <div class="profile-form-heading"><div><h2>Account security</h2><p>Review your account credentials.</p></div></div>
+                <div class="grid-2">
+                  <div class="group"><label for="currentPassword">Current password</label><input type="password" id="currentPassword" placeholder="Enter current password" /></div>
+                  <div class="group"><label for="newPassword">New password</label><input type="password" id="newPassword" placeholder="Enter new password" /></div>
+                </div>
+              </div>
+
+              <div class="profile-section-panel hidden" data-panel="privacy">
+                <div class="profile-form-heading"><div><h2>Privacy settings</h2><p>Control who can see your profile.</p></div></div>
+                <label class="privacy-option"><span><strong>Public profile</strong><small>Anyone can view your professional profile.</small></span><input type="checkbox" checked /></label>
+                <label class="privacy-option"><span><strong>Allow recruiters to contact you</strong><small>Recruiters can send opportunities directly.</small></span><input type="checkbox" checked /></label>
+              </div>
+
+              <input id="photoInput" type="file" accept="image/*" hidden />
+              <div class="profile-form-actions">
+                <button class="btn btn-light" type="reset">Cancel</button>
+                <button class="btn" type="submit"><i class="fas fa-check"></i> Save changes</button>
+              </div>
+            </form>
           </div>
         </div>
       </main>
