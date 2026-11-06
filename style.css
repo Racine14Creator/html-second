@@ -83,6 +83,7 @@ main nav form {
   border: 2px solid #ccc;
   padding: 5px;
   flex: 1;
+  width: 50%;
 }
 main nav form input {
   background: none;
@@ -275,6 +276,14 @@ aside ul li a i {
 
 .navgation-menu .icon {
   cursor: pointer;
+  width: 32px;
+  height: 32px;
+
+  font-size: 10px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid #ccc;
 }
 
 .navgation-menu a {
